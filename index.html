@@ -8,18 +8,21 @@
 
 <title>CoachFood - Il tuo coach alimentare personale</title>
 
+<meta name="description" content="CoachFood: piano alimentare personalizzato, calorie, ricette e diario nutrizionale per raggiungere i tuoi obiettivi.">
+
 <link rel="icon" href="coach_food_512.jpg">
 
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+<style>
 
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Inter',Arial,sans-serif;
+    font-family:'Inter',sans-serif;
 }
 
 
@@ -31,16 +34,26 @@ body{
 }
 
 
+html{
+    scroll-behavior:smooth;
+}
+
+
 
 .hero{
 
-    min-height:720px;
-    padding:80px 25px;
+    min-height:600px;
+
+    padding:90px 25px;
+
     text-align:center;
+
     color:white;
 
+    overflow:hidden;
+
     background:
-    radial-gradient(circle at top,#35e58d,#12a86b 60%,#08784b);
+    radial-gradient(circle at top,#42f59b,#12a86b 45%,#08784b);
 
 }
 
@@ -48,24 +61,33 @@ body{
 
 .logo{
 
-    width:130px;
-    height:130px;
-    border-radius:35px;
+    width:140px;
+
+    height:140px;
+
+    border-radius:38px;
+
     object-fit:cover;
 
     box-shadow:
-    0 25px 50px rgba(0,0,0,.25);
+    0 30px 60px rgba(0,0,0,.25);
+
+    animation:fade 1s;
 
 }
 
 
 
+
 .hero h1{
 
-    font-size:64px;
+    margin-top:35px;
+
+    font-size:72px;
+
     font-weight:800;
-    margin-top:30px;
-    letter-spacing:-2px;
+
+    letter-spacing:-3px;
 
 }
 
@@ -73,43 +95,113 @@ body{
 
 .hero p{
 
-    max-width:700px;
-    margin:20px auto;
-    font-size:24px;
+    max-width:750px;
+
+    margin:25px auto;
+
+    font-size:25px;
+
     line-height:1.5;
 
+    opacity:.95;
+
 }
+
 
 
 
 .button{
 
     display:inline-block;
-    margin-top:35px;
+
+    margin-top:30px;
 
     background:white;
+
     color:#07945b;
 
-    padding:18px 35px;
+    padding:18px 38px;
 
-    border-radius:20px;
+    border-radius:22px;
+
+    font-weight:800;
 
     text-decoration:none;
 
-    font-weight:700;
-
     box-shadow:
-    0 15px 35px rgba(0,0,0,.15);
+    0 20px 40px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+}
+
+
+.button:hover{
+
+    transform:translateY(-5px);
 
 }
 
 
 
+
+.hero-phone{
+
+
+    margin:70px auto 0;
+
+    width:300px;
+
+    height:560px;
+
+    border-radius:45px;
+
+    background:
+
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.35),
+    rgba(255,255,255,.08)
+    );
+
+
+    border:
+
+    8px solid rgba(255,255,255,.4);
+
+
+    box-shadow:
+
+    0 40px 80px rgba(0,0,0,.25);
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    color:white;
+
+    font-size:14px;
+
+    backdrop-filter:blur(15px);
+
+
+}
+
+
+
+
+
 section{
 
-    max-width:1150px;
+    max-width:1200px;
+
     margin:auto;
-    padding:90px 25px;
+
+    padding:100px 25px;
 
 }
 
@@ -118,8 +210,11 @@ section{
 .title{
 
     text-align:center;
-    font-size:42px;
+
+    font-size:44px;
+
     font-weight:800;
+
     letter-spacing:-1px;
 
 }
@@ -128,46 +223,65 @@ section{
 
 .subtitle{
 
+    max-width:800px;
+
+    margin:25px auto;
+
     text-align:center;
-    max-width:750px;
-    margin:20px auto;
 
     color:#64748b;
-    font-size:19px;
+
+    font-size:20px;
+
     line-height:1.7;
 
 }
 
 
 
-/* FEATURES */
 
 
-.features{
+.grid{
+
 
     margin-top:60px;
 
     display:grid;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 
-    gap:25px;
+    gap:30px;
+
 
 }
 
 
 
+
 .card{
+
 
     background:white;
 
     padding:35px;
 
-    border-radius:30px;
+    border-radius:32px;
+
 
     box-shadow:
-    0 15px 40px rgba(0,0,0,.06);
+
+    0 20px 50px rgba(0,0,0,.07);
+
+
+    transition:.3s;
+
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
 
 }
 
@@ -176,72 +290,46 @@ section{
 .card h3{
 
     font-size:22px;
+
     margin-bottom:15px;
 
 }
 
 
-
 .card p{
 
     color:#64748b;
-    line-height:1.6;
+
+    line-height:1.7;
 
 }
 
 
 
-/* SCREENSHOT */
+
+.icon{
 
 
-.screens{
+    font-size:35px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+.steps{
+
 
     margin-top:60px;
 
     display:grid;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-    gap:35px;
+    gap:30px;
 
-}
-
-
-
-.phone{
-
-    width:100%;
-
-    max-width:270px;
-
-    margin:auto;
-
-    border-radius:35px;
-
-    box-shadow:
-
-    0 25px 50px rgba(0,0,0,.15);
-
-}
-
-
-
-
-
-/* HOW */
-
-
-.steps{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
-    gap:25px;
-
-    margin-top:50px;
 
 }
 
@@ -249,26 +337,33 @@ section{
 
 .step{
 
-    background:#ffffff;
 
-    padding:30px;
+    background:white;
 
-    border-radius:25px;
+    padding:35px;
+
+    border-radius:30px;
+
 
 }
 
 
 
+
 .number{
 
-    width:45px;
-    height:45px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    width:50px;
+
+    height:50px;
 
     border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     background:#18c77b;
 
@@ -278,47 +373,145 @@ section{
 
     margin-bottom:20px;
 
+
 }
 
 
 
-/* PREMIUM */
+
+.screens{
+
+
+    margin-top:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+
+}
+
+
+
+.phone{
+
+
+    width:260px;
+
+    border-radius:40px;
+
+
+    box-shadow:
+
+    0 30px 60px rgba(0,0,0,.15);
+
+
+}
+
+
 
 
 .premium{
 
-    background:
 
-    linear-gradient(135deg,#111827,#1f2937);
+    max-width:1150px;
+
+    margin:80px auto;
+
+    border-radius:45px;
+
+    padding:70px 50px;
+
 
     color:white;
 
-    border-radius:40px;
+
+    background:
+
+    linear-gradient(135deg,#111827,#273449);
+
 
 }
 
+
+
+.premium h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
 
 
 .premium p{
 
     color:#d1d5db;
 
+    font-size:20px;
+
+    line-height:1.7;
+
 }
 
 
 
-/* FOOTER */
+.premium ul{
+
+    margin-top:30px;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+.notice{
+
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:40px;
+
+    text-align:center;
+
+
+}
+
+
 
 
 footer{
 
+
     background:#111827;
+
+    padding:60px 20px;
 
     color:white;
 
     text-align:center;
 
-    padding:50px 20px;
+
+}
+
+
+
+footer a{
+
+    color:#34d399;
+
+    text-decoration:none;
 
 }
 
@@ -326,10 +519,40 @@ footer{
 
 footer p{
 
-    margin-top:10px;
+    margin-top:15px;
+
     color:#9ca3af;
 
 }
+
+
+
+
+
+@keyframes fade{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+
+}
+
+
 
 
 
@@ -338,21 +561,30 @@ footer p{
 
 .hero h1{
 
-    font-size:45px;
+font-size:48px;
 
 }
 
 
 .hero p{
 
-    font-size:19px;
+font-size:19px;
 
 }
 
 
 .title{
 
-    font-size:32px;
+font-size:32px;
+
+}
+
+
+.hero-phone{
+
+width:260px;
+
+height:500px;
 
 }
 
@@ -375,13 +607,13 @@ footer p{
 <header class="hero">
 
 
-<img class="logo"
-src="coach_food_512.jpg"
-alt="CoachFood">
+<img class="logo" src="coach_food_512.jpg">
 
 
 <h1>
+
 CoachFood
+
 </h1>
 
 
@@ -393,15 +625,15 @@ piano alimentare, calorie, ricette e diario nutrizionale.
 </p>
 
 
-<a class="button" href="#">
+<a class="button">
 
 Disponibile presto su Google Play
 
 </a>
 
-
-
 </header>
+
+
 
 
 
@@ -412,32 +644,33 @@ Disponibile presto su Google Play
 <h2 class="title">
 
 Mangia meglio.
-Raggiungi i tuoi obiettivi.
+Vivi meglio.
 
 </h2>
 
 
 <p class="subtitle">
 
-CoachFood ti aiuta a costruire un'alimentazione equilibrata
-con strumenti semplici, personalizzati e facili da usare ogni giorno.
+CoachFood ti accompagna ogni giorno con strumenti semplici
+per creare abitudini alimentari migliori e raggiungere i tuoi obiettivi.
 
 </p>
 
 
 
-
-<div class="features">
+<div class="grid">
 
 
 <div class="card">
 
+<div class="icon">🥗</div>
+
 <h3>
-🥗 Piano alimentare personalizzato
+Piano personalizzato
 </h3>
 
 <p>
-Crea un piano alimentare basato sui tuoi obiettivi,
+Crea un percorso alimentare basato sui tuoi obiettivi,
 preferenze e stile di vita.
 </p>
 
@@ -447,13 +680,15 @@ preferenze e stile di vita.
 
 <div class="card">
 
+<div class="icon">📊</div>
+
 <h3>
-📊 Diario nutrizionale
+Diario nutrizionale
 </h3>
 
 <p>
 Registra pasti, calorie e macronutrienti
-per avere sempre il controllo della tua alimentazione.
+per avere sempre il controllo.
 </p>
 
 </div>
@@ -462,13 +697,15 @@ per avere sempre il controllo della tua alimentazione.
 
 <div class="card">
 
+<div class="icon">🍳</div>
+
 <h3>
-🍳 Ricette intelligenti
+Ricette intelligenti
 </h3>
 
 <p>
-Scopri ricette con valori nutrizionali,
-procedimenti e lista della spesa.
+Scopri ricette con valori nutrizionali
+e organizzazione della spesa.
 </p>
 
 </div>
@@ -477,13 +714,15 @@ procedimenti e lista della spesa.
 
 <div class="card">
 
+<div class="icon">🎯</div>
+
 <h3>
-🎯 Monitoraggio progressi
+Progressi personali
 </h3>
 
 <p>
-Peso, passi, obiettivi e promemoria
-per migliorare giorno dopo giorno.
+Monitora peso, passi e obiettivi
+giorno dopo giorno.
 </p>
 
 </div>
@@ -494,6 +733,7 @@ per migliorare giorno dopo giorno.
 
 
 </section>
+
 
 
 
@@ -514,56 +754,44 @@ Come funziona
 
 <div class="step">
 
-<div class="number">
-1
-</div>
+<div class="number">1</div>
 
 <h3>
-Crea il tuo profilo
+Crea il profilo
 </h3>
 
 <p>
-Inserisci obiettivi, dati personali
-e preferenze alimentari.
+Inserisci i tuoi dati e scegli il tuo obiettivo.
 </p>
 
 </div>
 
 
-
 <div class="step">
 
-<div class="number">
-2
-</div>
+<div class="number">2</div>
 
 <h3>
 Segui il piano
 </h3>
 
 <p>
-Organizza pasti, ricette
-e alimentazione quotidiana.
+Organizza pasti, ricette e alimentazione quotidiana.
 </p>
 
 </div>
 
 
-
-
 <div class="step">
 
-<div class="number">
-3
-</div>
+<div class="number">3</div>
 
 <h3>
-Controlla i risultati
+Migliora ogni giorno
 </h3>
 
 <p>
-Monitora progressi e migliora
-le tue abitudini.
+Controlla i risultati e costruisci nuove abitudini.
 </p>
 
 </div>
@@ -573,6 +801,8 @@ le tue abitudini.
 
 
 </section>
+
+
 
 
 
@@ -607,14 +837,14 @@ src="Screenshot_20260706-160648.jpg">
 </div>
 
 
-
 </section>
 
 
 
 
 
-<section class="premium">
+
+<div class="premium">
 
 
 <h2>
@@ -626,14 +856,27 @@ src="Screenshot_20260706-160648.jpg">
 
 <p>
 
-Accedi a strumenti avanzati,
-funzioni aggiuntive per la pianificazione alimentare
-e contenuti esclusivi per migliorare il tuo percorso.
+Sblocca strumenti avanzati per seguire
+il tuo percorso alimentare in modo ancora più completo.
 
 </p>
 
 
-</section>
+<ul>
+
+<li>✓ Funzioni avanzate di pianificazione</li>
+
+<li>✓ Contenuti esclusivi</li>
+
+<li>✓ Strumenti aggiuntivi per il monitoraggio</li>
+
+<li>✓ Esperienza senza limiti</li>
+
+</ul>
+
+
+</div>
+
 
 
 
@@ -642,7 +885,10 @@ e contenuti esclusivi per migliorare il tuo percorso.
 <section>
 
 
-<h2 class="title">
+<div class="notice">
+
+
+<h2>
 
 Importante
 
@@ -655,9 +901,12 @@ CoachFood è un'app dedicata al benessere
 e all'organizzazione alimentare.
 
 Non sostituisce il parere di medici,
-nutrizionisti o altri professionisti sanitari.
+nutrizionisti o professionisti sanitari.
 
 </p>
+
+
+</div>
 
 
 </section>
@@ -671,24 +920,35 @@ nutrizionisti o altri professionisti sanitari.
 
 
 <h2>
+
 CoachFood
+
 </h2>
 
 
 <p>
-Supporto: coachfood.support@gmail.com
+
+Supporto:
+coachfood.support@gmail.com
+
 </p>
 
 
 <p>
-<a href="https://sites.google.com/view/coachfood-privacy/home-page" target="_blank">
+
+<a href="https://sites.google.com/view/coachfood-privacy/home-page">
+
 Privacy Policy
+
 </a>
+
 </p>
 
 
 <p>
+
 © 2026 CoachFood
+
 </p>
 
 
